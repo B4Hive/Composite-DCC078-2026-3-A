@@ -1,0 +1,15 @@
+@startuml Composite
+
+title Composite Pattern
+hide members
+left to right direction
+
+abstract class Conteudo
+class Livro
+class Texto extends Conteudo
+class Capitulo extends Conteudo
+
+Livro --> "1" Conteudo
+Capitulo *-- "0..*" Conteudo : Composite
+
+@enduml
